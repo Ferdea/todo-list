@@ -28,6 +28,11 @@ class Component {
   constructor() {
   }
 
+  update() {
+    this._domNode.innerhtml = '';
+    this._domNode = this.render();
+  }
+
   getDomNode() {
     this._domNode = this.render();
     return this._domNode;
